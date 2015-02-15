@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Store.Web.ViewModels.CategoryViewModel>
+
+@{
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+
+</p>
+<div class="container">
+    <div class="jumbotron">
+
+        @foreach (var item in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    @*@Html.DisplayFor(modelItem => item.Name)*@
+                    @Html.ActionLink("View all " + item.Name, "Index", new { category = item.Name }, new { @class = "pull-right" })
+                    @using (Html.BeginForm("Filter", "Home", new { category = item.Name }, FormMethod.Post, new { @class = "navbar-form" }))
+                    {
+                        @Html.TextBox("gadgetName", null, new { @class = "form-control", placeholder = "Search in " + item.Name })
+                    }
+
+
+                </div>
+                @foreach (var gadget in item.Gadgets)
+                {
+                    @Html.Partial("Gadget", gadget)
+                }
+                <div class="panel-footer">
+                    @using (Html.BeginForm("Create", "Home", FormMethod.Post,
+                            new { enctype = "multipart/form-data", @class = "form-inline" }))
+                    {
+                        @Html.Hidden("GadgetCategory", item.CategoryID)
+                        <div class="form-group">
+                            <label class="sr-only" for="file">File</label>
+                            <input type="file" class="form-control" name="file" placeholder="Select picture..">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="gadgetTitle">Title</label>
+                            <input type="text" class="form-control" name="gadgetTitle" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="gadgetName">Price</label>
+                            <input type="number" class="form-control" name="gadgetPrice" placeholder="Price">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="gadgetName">Description</label>
+                            <input type="text" class="form-control" name="gadgetDescription" placeholder="Description">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    }
+                </div>
+            </div>
+        }
+
+    </div>
+
+</div>
