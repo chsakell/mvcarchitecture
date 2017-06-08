@@ -1,5 +1,5 @@
-<h3>ASP.NET MVC Solution Architecture – Best Practices</h3>
-
+# ASP.NET MVC Solution Architecture – Best Practices
+[Blog post](http://chsakell.com/2015/02/15/asp-net-mvc-solution-architecture-best-practices/)
 <ol>
 <li>Entity Framework Code First development</li>
 <li>Generic Repository Pattern</li>
