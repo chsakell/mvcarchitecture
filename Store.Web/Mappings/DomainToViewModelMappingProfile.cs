@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
 using Store.Model;
 using Store.Web.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using Store.Model.Models;
 
 namespace Store.Web.Mappings

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Store.Model.Models;
+﻿using Store.Model.Models;
 
 namespace Store.Model
 {

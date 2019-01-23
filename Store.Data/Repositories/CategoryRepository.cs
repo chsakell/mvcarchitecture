@@ -1,5 +1,4 @@
 ﻿using Store.Data.Infrastructure;
-using Store.Model;
 using System;
 using System.Linq;
 using Store.Model.Models;
