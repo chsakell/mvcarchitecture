@@ -32,7 +32,7 @@
                     @using (Html.BeginForm("Create", "Home", FormMethod.Post,
                             new { enctype = "multipart/form-data", @class = "form-inline" }))
                     {
-                        @Html.Hidden("GadgetCategory", item.CategoryID)
+                        @Html.Hidden("GadgetCategory", item.CategoryId)
                         <div class="form-group">
                             <label class="sr-only" for="file">File</label>
                             <input type="file" class="form-control" name="file" placeholder="Select picture..">

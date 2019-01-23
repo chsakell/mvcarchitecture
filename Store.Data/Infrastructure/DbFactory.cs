@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Store.Data.Infrastructure
+﻿namespace Store.Data.Infrastructure
 {
     public class DbFactory : Disposable, IDbFactory
     {
-        StoreEntities dbContext;
+        private StoreEntities _dbContext;
 
         public StoreEntities Init()
         {
-            return dbContext ?? (dbContext = new StoreEntities());
+            return _dbContext ?? (_dbContext = new StoreEntities());
         }
 
         protected override void DisposeCore()
         {
-            if (dbContext != null)
-                dbContext.Dispose();
+            if (_dbContext != null)
+                _dbContext.Dispose();
         }
     }
 }

@@ -1,11 +1,8 @@
 ﻿using Store.Data.Infrastructure;
 using Store.Data.Repositories;
-using Store.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Store.Model.Models;
 
 namespace Store.Service
 {
@@ -21,13 +18,13 @@ namespace Store.Service
 
     public class CategoryService : ICategoryService
     {
-        private readonly ICategoryRepository categorysRepository;
-        private readonly IUnitOfWork unitOfWork;
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CategoryService(ICategoryRepository categorysRepository, IUnitOfWork unitOfWork)
+        public CategoryService(ICategoryRepository categoryRepository, IUnitOfWork unitOfWork)
         {
-            this.categorysRepository = categorysRepository;
-            this.unitOfWork = unitOfWork;
+            _categoryRepository = categoryRepository;
+            _unitOfWork = unitOfWork;
         }
 
         #region ICategoryService Members
@@ -35,31 +32,31 @@ namespace Store.Service
         public IEnumerable<Category> GetCategories(string name = null)
         {
             if (string.IsNullOrEmpty(name))
-                return categorysRepository.GetAll();
+                return _categoryRepository.GetAll();
             else
-                return categorysRepository.GetAll().Where(c => c.Name == name);
+                return _categoryRepository.GetAll().Where(c => c.Name == name);
         }
 
         public Category GetCategory(int id)
         {
-            var category = categorysRepository.GetById(id);
+            var category = _categoryRepository.GetById(id);
             return category;
         }
 
         public Category GetCategory(string name)
         {
-            var category = categorysRepository.GetCategoryByName(name);
+            var category = _categoryRepository.GetCategoryByName(name);
             return category;
         }
 
         public void CreateCategory(Category category)
         {
-            categorysRepository.Add(category);
+            _categoryRepository.Add(category);
         }
 
         public void SaveCategory()
         {
-            unitOfWork.Commit();
+            _unitOfWork.Commit();
         }
 
         #endregion

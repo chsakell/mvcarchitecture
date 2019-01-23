@@ -1,10 +1,8 @@
 ﻿using Store.Data.Infrastructure;
 using Store.Model;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Store.Model.Models;
 
 namespace Store.Data.Repositories
 {
@@ -15,7 +13,7 @@ namespace Store.Data.Repositories
 
         public Category GetCategoryByName(string categoryName)
         {
-            var category = this.DbContext.Categories.Where(c => c.Name == categoryName).FirstOrDefault();
+            var category = DbContext.Categories.FirstOrDefault(c => c.Name == categoryName);
 
             return category;
         }

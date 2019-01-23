@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Store.Model.Models;
 
 namespace Store.Model
 {
@@ -14,7 +14,7 @@ namespace Store.Model
         public decimal Price { get; set; }
         public string Image { get; set; }
 
-        public int CategoryID { get; set; }
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
     }
 }

@@ -4,11 +4,7 @@ using Store.Data.Infrastructure;
 using Store.Data.Repositories;
 using Store.Service;
 using Store.Web.Mappings;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Store.Web.App_Start

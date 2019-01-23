@@ -8,7 +8,7 @@ namespace Store.Web.ViewModels
 {
     public class CategoryViewModel
     {
-        public int CategoryID { get; set; }
+        public int CategoryId { get; set; }
         public string Name { get; set; }
 
         public List<GadgetViewModel> Gadgets { get; set; }
