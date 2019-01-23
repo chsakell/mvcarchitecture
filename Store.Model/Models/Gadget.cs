@@ -1,6 +1,4 @@
-﻿using Store.Model.Models;
-
-namespace Store.Model
+﻿namespace Store.Model.Models
 {
     public class Gadget
     {

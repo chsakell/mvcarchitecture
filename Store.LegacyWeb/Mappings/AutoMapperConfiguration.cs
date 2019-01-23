@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace Store.Web.Mappings
+namespace Store.LegacyWeb.Mappings
 {
     public class AutoMapperConfiguration
     {

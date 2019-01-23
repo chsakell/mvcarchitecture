@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using Store.LegacyWeb.ViewModels;
 using Store.Model;
-using Store.Web.ViewModels;
 using Store.Model.Models;
 
-namespace Store.Web.Mappings
+namespace Store.LegacyWeb.Mappings
 {
     public class DomainToViewModelMappingProfile : Profile
     {

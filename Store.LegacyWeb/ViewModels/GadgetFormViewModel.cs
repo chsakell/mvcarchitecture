@@ -1,6 +1,6 @@
 ﻿using System.Web;
 
-namespace Store.Web.ViewModels
+namespace Store.LegacyWeb.ViewModels
 {
     public class GadgetFormViewModel
     {

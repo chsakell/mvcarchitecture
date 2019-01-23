@@ -1,5 +1,6 @@
 ﻿using Store.Model;
 using System.Data.Entity.ModelConfiguration;
+using Store.Model.Models;
 
 namespace Store.Data.Configuration
 {

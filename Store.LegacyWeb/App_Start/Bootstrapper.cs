@@ -1,13 +1,13 @@
-﻿using Autofac;
+﻿using System.Reflection;
+using System.Web.Mvc;
+using Autofac;
 using Autofac.Integration.Mvc;
 using Store.Data.Infrastructure;
 using Store.Data.Repositories;
+using Store.LegacyWeb.Mappings;
 using Store.Service;
-using Store.Web.Mappings;
-using System.Reflection;
-using System.Web.Mvc;
 
-namespace Store.Web.App_Start
+namespace Store.LegacyWeb
 {
     public static class Bootstrapper
     {

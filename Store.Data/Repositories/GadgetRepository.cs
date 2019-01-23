@@ -1,5 +1,6 @@
 ﻿using Store.Data.Infrastructure;
 using Store.Model;
+using Store.Model.Models;
 
 namespace Store.Data.Repositories
 {
